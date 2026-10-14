@@ -229,6 +229,28 @@
     });
   }
 
+  /* tableaux défilants : flèches gauche/droite quand le contenu dépasse (utile sur mobile) */
+  $$('.tbl-w').forEach(t => {
+    const fr = document.documentElement.lang === 'fr';
+    const wrap = document.createElement('div'); wrap.className = 'tbl-wrap';
+    t.parentNode.insertBefore(wrap, t); wrap.appendChild(t);
+    const mk = (dir) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'tbl-arr tbl-arr--' + dir;
+      b.setAttribute('aria-label', dir === 'r' ? (fr ? 'Voir la suite du tableau' : 'Scroll table right') : (fr ? 'Revenir au début du tableau' : 'Scroll table left'));
+      b.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + (dir === 'r' ? 'M9 5l7 7-7 7' : 'M15 5l-7 7 7 7') + '"/></svg>';
+      b.addEventListener('click', () => t.scrollBy({ left: (dir === 'r' ? 1 : -1) * Math.max(160, t.clientWidth * .6), behavior: reduce ? 'auto' : 'smooth' }));
+      wrap.appendChild(b);
+    };
+    mk('l'); mk('r');
+    const upd = () => {
+      const max = t.scrollWidth - t.clientWidth;
+      wrap.classList.toggle('can-l', t.scrollLeft > 4);
+      wrap.classList.toggle('can-r', max > 4 && t.scrollLeft < max - 4);
+    };
+    t.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(upd);
+  });
+
   /* formulaire : ouvre la messagerie avec la demande pré-remplie (aucun serveur requis) */
   $('form[data-mailto]')?.addEventListener('submit', e => {
     e.preventDefault();
