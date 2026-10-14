@@ -133,11 +133,24 @@
   }
 
   /* démo multi-écrans */
-  const dev = $('.dev');
-  $$('.seg button').forEach(b => b.addEventListener('click', () => {
-    $$('.seg button').forEach(x => x.setAttribute('aria-pressed', 'false'));
-    b.setAttribute('aria-pressed', 'true'); dev.dataset.d = b.dataset.d;
-  }));
+  /* démo multi-écrans : le site maquette garde la largeur réelle de l'écran choisi (1024 / 768 / 375 px),
+     puis est réduit pour tenir dans la zone : le changement reste visible même sur téléphone */
+  const dev = $('.dev'), mock = $('.mock', dev || document);
+  if (dev && mock) {
+    const W = { desktop: 1024, tablet: 768, mobile: 375 };
+    const fit = () => {
+      const avail = dev.parentElement.clientWidth - 52, w = W[dev.dataset.d] || 1024, k = Math.min(1, avail / w);
+      mock.style.width = w + 'px'; mock.style.transform = `scale(${k})`;
+      mock.style.marginLeft = Math.max(0, (dev.clientWidth - w * k) / 2) + 'px';
+      dev.style.height = Math.ceil(mock.offsetHeight * k + 12) + 'px';
+    };
+    $$('.seg button').forEach(b => b.addEventListener('click', () => {
+      $$('.seg button').forEach(x => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true'); dev.dataset.d = b.dataset.d; fit();
+    }));
+    fit(); addEventListener('resize', fit); addEventListener('load', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
 
   /* étapes (process) */
   const steps = $$('.step');
