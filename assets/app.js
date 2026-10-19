@@ -168,7 +168,15 @@
       panes.forEach((p, k) => p.classList.toggle('on', k === i));
       panel.dataset.c = tabs[i].dataset.c;
     };
-    tabs.forEach((t, i) => t.addEventListener('click', () => sel(i)));
+    const reduceXp = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    tabs.forEach((t, i) => t.addEventListener('click', () => {
+      sel(i);
+      /* panneau sous les onglets (mobile/tablette) : on y glisse doucement pour que le contenu soit évident */
+      if (panel.getBoundingClientRect().top > t.getBoundingClientRect().bottom - 4) {
+        panel.scrollIntoView({ behavior: reduceXp ? 'auto' : 'smooth', block: 'start' });
+      }
+      panel.classList.remove('ping'); void panel.offsetWidth; panel.classList.add('ping');
+    }));
     const h = location.hash.replace('#', ''), k = tabs.findIndex(t => t.dataset.id === h);
     sel(k >= 0 ? k : 0);
   }
@@ -262,4 +270,64 @@
     const ok = $('.ok', f); ok.textContent = f.dataset.ok; ok.hidden = false;
     location.href = url;
   });
+})();
+
+/* aperçu print : slider avant-gardiste (scroll-snap + inclinaison 3D + compteur) */
+(() => {
+  const root = document.querySelector('.pk');
+  if (!root) return;
+  const track = root.querySelector('.pk__track'), slides = [...root.querySelectorAll('.pk__s')];
+  const cnt = root.querySelector('.pk__cnt b'), bar = root.querySelector('.pk__prog i');
+  let raf = 0, cur = -1;
+  const upd = () => {
+    raf = 0;
+    const tr = track.getBoundingClientRect(), mid = tr.left + tr.width / 2;
+    let best = 0, bd = 1e9;
+    slides.forEach((s, i) => {
+      const r = s.getBoundingClientRect(), d = (r.left + r.width / 2 - mid) / r.width;
+      s.style.setProperty('--d', Math.max(-1.6, Math.min(1.6, d)).toFixed(3));
+      s.style.setProperty('--a', Math.min(1, Math.abs(d)).toFixed(3));
+      if (Math.abs(d) < bd) { bd = Math.abs(d); best = i; }
+    });
+    const max = track.scrollWidth - track.clientWidth;
+    bar.style.transform = 'scaleX(' + Math.max(.06, track.scrollLeft / Math.max(1, max)).toFixed(3) + ')';
+    if (best !== cur) {
+      cur = best;
+      cnt.textContent = String(best + 1).padStart(2, '0');
+      root.dataset.acc = slides[best].dataset.acc;
+    }
+  };
+  const q = () => { if (!raf) raf = requestAnimationFrame(upd); };
+  track.addEventListener('scroll', q, { passive: true });
+  addEventListener('resize', q);
+  root.querySelectorAll('.pk__b').forEach(b => b.addEventListener('click', () => {
+    const w = slides[0].getBoundingClientRect().width + 24;
+    track.scrollBy({ left: +b.dataset.d * w, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }));
+  /* glisser à la souris */
+  let down = false, sx = 0, sl = 0, moved = false;
+  track.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = track.scrollLeft; });
+  addEventListener('pointermove', e => {
+    if (!down) return;
+    const dx = e.clientX - sx;
+    if (Math.abs(dx) > 4) { moved = true; track.classList.add('drag'); }
+    if (moved) track.scrollLeft = sl - dx;
+  });
+  addEventListener('pointerup', () => {
+    if (!down) return; down = false;
+    if (moved) { track.classList.remove('drag'); }
+  });
+  /* clic sur une diapositive : la centre */
+  slides.forEach(s => s.addEventListener('click', () => { if (!moved) s.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }); }));
+  upd();
+})();
+
+/* démo multi-écrans : un vrai site (lebod.ch) vu sur desktop, tablette et mobile */
+(() => {
+  const box = document.querySelector('.dvx'), btns = [...document.querySelectorAll('.seg button')];
+  if (!box || !btns.length) return;
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    box.dataset.d = b.dataset.d;
+  }));
 })();
