@@ -7,3 +7,4 @@
 @media(max-width:700px){.home .tile{min-height:0;gap:2px;padding:24px 24px 22px}.home .tile__ill{flex:none;min-height:0;height:auto;margin:8px 0 10px}.home .tile__ill>*{zoom:.58}.home .tile .go{width:34px;height:34px;border-radius:10px;right:16px;top:16px}.home .tile .go svg{width:15px;height:15px}.home .tile h3{margin:4px 0 6px}}
 .req{color:var(--red);font-weight:700}
 @media(max-width:700px){.home .sites-row{grid-template-columns:1fr;gap:26px}.home .sites-row .s:nth-child(3){display:none}}
+.ok.is-err{background:#FFD9D6}.ok a{text-decoration:underline}.formule-note{font-weight:700;color:var(--ink)}

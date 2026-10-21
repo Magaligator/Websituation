@@ -1,0 +1,6 @@
+{
+  "name": "websituation",
+  "private": true,
+  "description": "Site statique Websituation + fonction /api/contact (Resend) sur Vercel",
+  "engines": { "node": ">=18" }
+}

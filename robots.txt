@@ -1,5 +1,19 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /404.html
+
+# Robots d'IA de recherche et de citation : autorisés explicitement.
+# Les robots d'entraînement (GPTBot, Google-Extended, Applebot-Extended) ne sont pas nommés : ils suivent la règle générale ci-dessus.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
 Disallow: /404.html
 
 Sitemap: https://www.websituation.ch/sitemap.xml

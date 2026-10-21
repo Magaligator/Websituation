@@ -259,17 +259,50 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(upd);
   });
 
-  /* formulaire : ouvre la messagerie avec la demande pré-remplie (aucun serveur requis) */
-  $('form[data-mailto]')?.addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target, lines = [];
-    const svc = $$('input[name=svc]:checked', f).map(c => c.value);
-    if (svc.length) lines.push(f.dataset.lsvc + ' : ' + svc.join(', '));
-    $$('[data-label]', f).forEach(el => { const v = el.value.trim(); if (v) lines.push(el.dataset.label + ' : ' + v); });
-    const url = 'mailto:' + f.dataset.mailto + '?subject=' + encodeURIComponent(f.dataset.subject) + '&body=' + encodeURIComponent(lines.join('\n'));
-    const ok = $('.ok', f); ok.textContent = f.dataset.ok; ok.hidden = false;
-    location.href = url;
-  });
+  /* formulaire de contact : envoi via /api/contact (Resend) ; repli sur la messagerie si l'envoi échoue */
+  const cf = $('form[data-api]');
+  if (cf) {
+    const ok = $('.ok', cf), btn = $('button[type=submit]', cf);
+    // horodatage (anti-robot) et pré-sélection de la formule : contact.html?formule=pmepro
+    cf.elements.t.value = Date.now();
+    const slugs = { 'presque-free': 'Presque Free', pmepro: 'PMEPro', flexipro: 'FlexiPro' };
+    const wanted = (new URLSearchParams(location.search).get('formule') || '').toLowerCase();
+    if (slugs[wanted]) {
+      cf.elements.formule.value = wanted;
+      const t = $('[data-formule-target]', cf); if (t) t.checked = true;
+      const note = $('.formule-note', cf); if (note) { note.textContent = cf.dataset.formuleLabel + ' ' + slugs[wanted]; note.hidden = false; }
+    }
+    const show = (msg, err) => { ok.textContent = msg; ok.classList.toggle('is-err', !!err); ok.hidden = false; ok.focus({ preventScroll: false }); };
+    const fallback = () => {
+      const lines = [], svc = $$('input[name=svc]:checked', cf).map(c => c.value);
+      if (svc.length) lines.push(cf.dataset.lsvc + ' : ' + svc.join(', '));
+      $$('[data-label]', cf).forEach(el => { const v = el.value.trim(); if (v) lines.push(el.dataset.label + ' : ' + v); });
+      return 'mailto:' + cf.dataset.mailto + '?subject=' + encodeURIComponent(cf.dataset.subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    };
+    cf.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!cf.checkValidity()) { cf.reportValidity(); return; }
+      const payload = {
+        nom: cf.elements.nom.value, email: cf.elements.email.value, tel: cf.elements.tel.value, msg: cf.elements.msg.value,
+        svc: $$('input[name=svc]:checked', cf).map(c => c.value), formule: cf.elements.formule.value,
+        website: cf.elements.website.value, t: cf.elements.t.value, lang: cf.dataset.lang
+      };
+      btn.disabled = true; btn.setAttribute('aria-busy', 'true');
+      try {
+        const r = await fetch(cf.dataset.api, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok && j.ok) {
+          show(cf.dataset.ok.replace('{name}', payload.nom.trim().split(/\s+/)[0]), false);
+          cf.reset(); cf.elements.t.value = Date.now(); if (slugs[wanted]) cf.elements.formule.value = wanted;
+        } else if (j.errors) {
+          show(Object.values(j.errors).join(' '), true);
+        } else { throw new Error('send'); }
+      } catch (err) {
+        show(cf.dataset.err, true);
+        const a = document.createElement('a'); a.href = fallback(); a.textContent = ' ' + cf.dataset.mailto; ok.append(a);
+      } finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
+    });
+  }
 })();
 
 /* aperçu print : slider avant-gardiste (scroll-snap + inclinaison 3D + compteur) */
