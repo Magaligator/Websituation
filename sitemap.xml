@@ -141,6 +141,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/politique-de-confidentialite.html"/>
   </url>
   <url>
+    <loc>https://www.websituation.ch/blog-site-internet-ere-ia.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/blog-site-internet-ere-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/blog-website-in-the-age-of-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/blog-site-internet-ere-ia.html"/>
+    <image:image><image:loc>https://www.websituation.ch/assets/img/art-site-ia-cover-d-1500.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.websituation.ch/en/blog-website-in-the-age-of-ai.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/blog-site-internet-ere-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/blog-website-in-the-age-of-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/blog-site-internet-ere-ia.html"/>
+  </url>
+  <url>
     <loc>https://www.websituation.ch/blog-referencement-google-pme.html</loc>
     <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/blog-referencement-google-pme.html"/>

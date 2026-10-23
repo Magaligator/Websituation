@@ -14,6 +14,7 @@
 - [Réalisations print et identité](https://www.websituation.ch/realisations.html)
 
 ## Blog
+- [Site internet à l’ère de l’IA : en a-t-on encore besoin ?](https://www.websituation.ch/blog-site-internet-ere-ia.html)
 - [Référencement Google pour PME](https://www.websituation.ch/blog-referencement-google-pme.html)
 - [ChatGPT et stratégie digitale](https://www.websituation.ch/blog-chatgpt-ia-strategie-digitale.html)
 - [Protection des données et site web (nLPD)](https://www.websituation.ch/blog-protection-donnees-site-suisse.html)
