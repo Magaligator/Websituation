@@ -1,3 +1,4 @@
+/*! © 2026 Websituation — Magali Tshikudi Kabondo, Cologny (Genève) · Tous droits réservés · https://www.websituation.ch */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];

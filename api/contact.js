@@ -1,4 +1,5 @@
 'use strict';
+// © 2026 Websituation — Magali Tshikudi Kabondo, Cologny (Genève) · Tous droits réservés · https://www.websituation.ch
 /**
  * POST /api/contact — formulaire de contact Websituation (fonction Vercel + Resend).
  *
