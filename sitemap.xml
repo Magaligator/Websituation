@@ -235,6 +235,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/creation-site-internet-geneve.html"/>
   </url>
   <url>
+    <loc>https://www.websituation.ch/site-vitrine-responsive-geneve.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/responsive-showcase-website-geneva.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
+    <image:image><image:loc>https://www.websituation.ch/assets/img/svc-web-cover-d-1500.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.websituation.ch/en/responsive-showcase-website-geneva.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/responsive-showcase-website-geneva.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
+  </url>
+  <url>
+    <loc>https://www.websituation.ch/site-ecommerce-geneve.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/ecommerce-website-geneva.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
+    <image:image><image:loc>https://www.websituation.ch/assets/img/svc-web-cover-d-1500.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.websituation.ch/en/ecommerce-website-geneva.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/ecommerce-website-geneva.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
+  </url>
+  <url>
     <loc>https://www.websituation.ch/referencement-seo-geneve.html</loc>
     <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/referencement-seo-geneve.html"/>
