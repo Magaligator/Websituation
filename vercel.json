@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
@@ -23,7 +28,7 @@
     },
     {
       "source": "/blog/categories/chat-gpt-vs-gpt-open-ai",
-      "destination": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
       "permanent": true
     },
     {
@@ -113,7 +118,7 @@
     },
     {
       "source": "/blog/categories/artificielle-intelligence",
-      "destination": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
       "permanent": true
     },
     {
@@ -143,7 +148,7 @@
     },
     {
       "source": "/blog/categories/gpt-open-ai",
-      "destination": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
       "permanent": true
     },
     {
@@ -158,17 +163,17 @@
     },
     {
       "source": "/blog/categories/intelligence-artificielle",
-      "destination": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
       "permanent": true
     },
     {
       "source": "/blog/categories/chat-gpt",
-      "destination": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
       "permanent": true
     },
     {
       "source": "/blog/categories/chatbot",
-      "destination": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
+      "destination": "/blog-chatgpt-vs-gpt-openai.html",
       "permanent": true
     },
     {
@@ -207,12 +212,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html"
     }
   ]
 }
