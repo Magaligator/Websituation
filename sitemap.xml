@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.websituation.ch/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/"/>
   </url>
   <url>
     <loc>https://www.websituation.ch/en/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/"/>
   </url>
   <url>
     <loc>https://www.websituation.ch/services.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/services.html"/>
   </url>
   <url>
     <loc>https://www.websituation.ch/en/services.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/services.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/services.html"/>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/blog.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/blog.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/blog.html"/>
@@ -187,7 +187,7 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/blog-chatgpt-vs-gpt-openai.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://www.websituation.ch/blog-protection-donnees-site-suisse.html</loc>
@@ -221,7 +221,7 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/creation-site-internet-geneve.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/creation-site-internet-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/website-design-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/creation-site-internet-geneve.html"/>
@@ -229,14 +229,28 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/en/website-design-geneva.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/creation-site-internet-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/website-design-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/creation-site-internet-geneve.html"/>
   </url>
   <url>
+    <loc>https://www.websituation.ch/creation-site-internet-3d-suisse.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/creation-site-internet-3d-suisse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/3d-website-design-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/creation-site-internet-3d-suisse.html"/>
+  </url>
+  <url>
+    <loc>https://www.websituation.ch/en/3d-website-design-switzerland.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/creation-site-internet-3d-suisse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/3d-website-design-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/creation-site-internet-3d-suisse.html"/>
+  </url>
+  <url>
     <loc>https://www.websituation.ch/site-vitrine-responsive-geneve.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/responsive-showcase-website-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
@@ -244,14 +258,14 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/en/responsive-showcase-website-geneva.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/responsive-showcase-website-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-vitrine-responsive-geneve.html"/>
   </url>
   <url>
     <loc>https://www.websituation.ch/site-ecommerce-geneve.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/ecommerce-website-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
@@ -259,14 +273,14 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/en/ecommerce-website-geneva.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/ecommerce-website-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/site-ecommerce-geneve.html"/>
   </url>
   <url>
     <loc>https://www.websituation.ch/referencement-seo-geneve.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/referencement-seo-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/seo-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/referencement-seo-geneve.html"/>
@@ -274,7 +288,7 @@
   </url>
   <url>
     <loc>https://www.websituation.ch/en/seo-geneva.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/referencement-seo-geneve.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/seo-geneva.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/referencement-seo-geneve.html"/>

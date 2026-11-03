@@ -172,3 +172,35 @@ Lecture : le site est léger (moins de 500 Ko, un seul CSS bloquant, aucun JS lo
 | **Résultat accueil** | | Performance **97**, LCP **2,5 à 2,6 s**, FCP 1,5 s, TBT 0 ms, CLS 0 (contre 83 et 3,7 s en production avant correction) |
 
 Réserve : le LCP est tout juste à la limite de 2,5 s en lab. La mesure officielle reste celle de la production après déploiement. L'article GPT reste sans version EN (aucun hreflang, ce qui est valide pour une page unique en français).
+
+## 12. P1 — page service 3D (branche `seo-3d`, non déployée)
+
+| Livrable | Détail |
+|---|---|
+| Page FR | `creation-site-internet-3d-suisse.html` : title « Création de site internet 3D en Suisse \| Websituation » (53 car.), description de 131 car., H1 unique, 9 sections H2 conformes au plan, sommaire, « À retenir », FAQ de 8 questions (environ 1 180 mots avec la FAQ) |
+| Page EN | `en/3d-website-design-switzerland.html` : title 47 car., description 108 car., mêmes sections et FAQ (environ 1 050 mots) |
+| Balises | canonical, hreflang fr / en / x-default réciproques, Open Graph et Twitter (image `og-image.png` existante), lien de langue FR ↔ EN |
+| JSON-LD | `Service` (fournisseur = l'`Organization` existante, `areaServed` = pays Suisse), `BreadcrumbList`, `FAQPage`, `WebPage`, plus le graphe commun Organization, Person, WebSite. Blocs valides. |
+| Sitemap | 53 URLs (+2), 156 balises hreflang, réciprocité contrôlée, `lastmod` du 2026-11-03 pour les pages modifiées |
+| `llms.txt` | Ligne ajoutée dans les services |
+| Maillage entrant | Lien dans le pied de page des 55 pages ; phrase de contexte sur l'accueil FR et EN, `services`, `creation-site-internet-geneve`, `site-vitrine-responsive-geneve`, `site-ecommerce-geneve` et `referencement-seo-geneve` (FR et EN). Soit 6 liens contextuels par langue, hors pied de page. |
+| Maillage sortant | Création Genève, site vitrine, e-commerce, SEO, abonnements, contact, accueil, études de cas |
+| Contrôle global | 55 pages : 0 titre ou description en double, 0 lien interne cassé, 1 seul H1, 0 image sans `alt`, tous les JSON-LD valides |
+| Lighthouse mobile (serveur local compressé) | Page FR : performance 97, accessibilité 100, SEO 100, LCP 2,4 s, CLS 0,003, TBT 0 ms. Page EN : performance 97, LCP 2,6 s. |
+
+### Ce qui n'est pas fait, par choix
+
+- **Aucune donnée inventée** : pas de prix, de délai, de résultat, de client ni de technologie nommée. Chaque manque est un commentaire `TODO(client)` dans le source (4 par page) et n'apparaît pas à l'écran.
+- **Texte légal** (mentions, confidentialité) non touché.
+- **Titre et H1 de l'accueil** non modifiés : c'est la P2 du plan, qui touche le positionnement de la marque.
+- **Test des résultats enrichis Google** : à lancer sur l'URL publiée (l'outil exige une page en ligne).
+- **Objectif de 8 liens entrants contextuels** (P2) : 6 en place, hors pied de page.
+
+### TODO(client) à fournir
+
+1. Fourchettes de prix d'un site 3D et délais habituels (section « Combien coûte… »).
+2. Au moins un projet 3D, client ou démo propre à l'agence, avec capture, technologies et résultats (section « Un exemple de 3D… »). Aujourd'hui seul le cube de l'accueil est cité, comme exemple de 3D en CSS.
+3. Technologies réellement maîtrisées (Three.js, Spline, WebGL, autre) et qui produit les modèles 3D.
+4. Résultats mesurés sur un projet 3D (section « Ce que la 3D apporte »).
+5. Justification des chiffres de l'accueil « +50 structures », « 100 % satisfaits », « 30 % de temps gagné ».
+6. Nouveaux avis Google.
