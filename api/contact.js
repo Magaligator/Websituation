@@ -78,34 +78,79 @@ function validate(raw) {
 const row = (k, v) =>
   `<tr><td style="padding:6px 14px 6px 0;color:#555;vertical-align:top;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0">${v}</td></tr>`;
 const nl2br = (s) => esc(s).replace(/\n/g, '<br>');
-const wrap = (inner) =>
-  `<div style="font:16px/1.55 Helvetica,Arial,sans-serif;color:#0a0a0b;max-width:560px">${inner}</div>`;
+// En-tête et pied communs aux deux e-mails (logo + coordonnées)
+const SITE = {
+  logo: 'https://www.websituation.ch/assets/logo.png',
+  tel: '+41 79 879 00 79',
+  telHref: '+41798790079',
+  email: 'contact@websituation.ch',
+  adresse: '1223 Cologny',
+  url: 'https://www.websituation.ch',
+  urlLabel: 'www.websituation.ch',
+};
+const A = 'color:#0a0a0b;text-decoration:none';
+const wrap = (inner, lang) => {
+  const en = lang === 'en';
+  const site = en ? `${SITE.url}/en/` : `${SITE.url}/`;
+  return `<!DOCTYPE html><html lang="${en ? 'en' : 'fr'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#F3F4F6">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F3F4F6"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:14px;overflow:hidden;font:16px/1.55 Helvetica,Arial,sans-serif;color:#0a0a0b">
+  <tr><td style="font-size:0;line-height:0;height:6px">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td height="6" style="background:#2958e6"></td><td height="6" style="background:#FEFE26"></td><td height="6" style="background:#ff1716"></td><td height="6" style="background:#28c54c"></td>
+    </tr></table></td></tr>
+  <tr><td style="padding:22px 28px;border-bottom:1px solid #e5e7eb">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td style="vertical-align:middle;width:64px"><a href="${site}"><img src="${SITE.logo}" width="56" height="56" alt="Websituation" style="display:block;border:0;width:56px;height:56px"></a></td>
+      <td style="vertical-align:middle;padding-left:12px"><a href="${site}" style="${A};font-size:22px;font-weight:bold;letter-spacing:-0.3px">Websituation</a></td>
+      <td align="right" style="vertical-align:middle;font-size:13px;line-height:1.6;color:#555">
+        <a href="tel:${SITE.telHref}" style="${A}">${SITE.tel}</a><br>
+        <a href="mailto:${SITE.email}" style="${A}">${SITE.email}</a><br>
+        ${SITE.adresse}<br>
+        <a href="${site}" style="${A}">${SITE.urlLabel}</a>
+      </td>
+    </tr></table></td></tr>
+  <tr><td style="padding:28px">${inner}</td></tr>
+  <tr><td style="padding:18px 28px;background:#F3F4F6;font-size:12px;line-height:1.6;color:#666;text-align:center">
+    Websituation · ${SITE.adresse} (${en ? 'Geneva, Switzerland' : 'Genève, Suisse'})<br>
+    <a href="tel:${SITE.telHref}" style="color:#666">${SITE.tel}</a> · <a href="mailto:${SITE.email}" style="color:#666">${SITE.email}</a> · <a href="${site}" style="color:#666">${SITE.urlLabel}</a>
+  </td></tr>
+</table></td></tr></table></body></html>`;
+};
+const textFooter = `\n\n--\nWebsituation · ${SITE.adresse}\n${SITE.tel} · ${SITE.email}\n${SITE.urlLabel}`;
 
 function ownerMail(d, lang) {
   const L = lang === 'en'
     ? { n: 'Name', e: 'E-mail', p: 'Phone', s: 'Interested in', f: 'Plan', m: 'Project', h: 'New request from the website', none: '—' }
     : { n: 'Nom', e: 'E-mail', p: 'Téléphone', s: 'Intéressé(e) par', f: 'Formule', m: 'Projet', h: 'Nouvelle demande depuis le site', none: '—' };
+  const date = new Date().toLocaleString(lang === 'en' ? 'en-GB' : 'fr-CH', { timeZone: 'Europe/Zurich', dateStyle: 'full', timeStyle: 'short' });
   const html = wrap(
-    `<h2 style="margin:0 0 14px">${esc(L.h)}</h2><table style="border-collapse:collapse">` +
+    `<h2 style="margin:0 0 6px">${esc(L.h)}</h2><p style="margin:0 0 16px;color:#666;font-size:14px">${esc(date)}</p><table style="border-collapse:collapse">` +
       row(L.n, esc(d.nom)) +
       row(L.e, `<a href="mailto:${esc(d.email)}">${esc(d.email)}</a>`) +
       row(L.p, d.tel ? `<a href="tel:${esc(d.tel.replace(/[^0-9+]/g, ''))}">${esc(d.tel)}</a>` : L.none) +
       row(L.s, d.svc.length ? esc(d.svc.join(', ')) : L.none) +
       (d.formule ? row(L.f, esc(d.formule)) : '') +
       row(L.m, d.msg ? nl2br(d.msg) : L.none) +
-      '</table>'
+      '</table>',
+    lang
   );
-  const text = [L.h, '', `${L.n} : ${d.nom}`, `${L.e} : ${d.email}`, `${L.p} : ${d.tel || L.none}`, `${L.s} : ${d.svc.join(', ') || L.none}`]
-    .concat(d.formule ? [`${L.f} : ${d.formule}`] : [], ['', `${L.m} :`, d.msg || L.none]).join('\n');
+  const text = [L.h, date, '', `${L.n} : ${d.nom}`, `${L.e} : ${d.email}`, `${L.p} : ${d.tel || L.none}`, `${L.s} : ${d.svc.join(', ') || L.none}`]
+    .concat(d.formule ? [`${L.f} : ${d.formule}`] : [], ['', `${L.m} :`, d.msg || L.none]).join('\n') + textFooter;
   return { html, text };
 }
 
 function userMail(d, lang) {
   const first = d.nom.split(/\s+/)[0];
   const fr = lang !== 'en';
-  const recap = [];
-  if (d.formule) recap.push(fr ? `Formule : ${d.formule}` : `Plan: ${d.formule}`);
-  if (d.svc.length) recap.push((fr ? 'Intéressé(e) par : ' : 'Interested in: ') + d.svc.join(', '));
+  const none = '—';
+  const L = fr
+    ? { t: 'Récapitulatif de votre demande', n: 'Nom', e: 'E-mail', p: 'Téléphone', s: 'Intéressé(e) par', f: 'Formule', m: 'Votre projet' }
+    : { t: 'Summary of your request', n: 'Name', e: 'E-mail', p: 'Phone', s: 'Interested in', f: 'Plan', m: 'Your project' };
+  const recap = [
+    [L.n, d.nom], [L.e, d.email], [L.p, d.tel || none], [L.s, d.svc.join(', ') || none],
+  ].concat(d.formule ? [[L.f, d.formule]] : [], [[L.m, d.msg || none]]);
   const hello = fr ? `Bonjour ${first},` : `Hello ${first},`;
   const p1 = fr
     ? 'Merci pour votre message : nous avons bien reçu votre demande de consultation.'
@@ -117,10 +162,10 @@ function userMail(d, lang) {
     ? 'Une question urgente ? Appelez-nous au <a href="tel:+41798790079">+41 79 879 00 79</a> (lun–ven, 8h30–18h30).'
     : 'Something urgent? Call us on <a href="tel:+41798790079">+41 79 879 00 79</a> (Mon–Fri, 8:30–18:30).';
   const bye = fr ? 'À très vite,<br>L’équipe Websituation' : 'Speak soon,<br>The Websituation team';
-  const rec = recap.length ? `<p style="margin:0 0 16px;padding:12px 16px;background:#f3f4f6;border-radius:10px">${recap.map(esc).join('<br>')}</p>` : '';
-  const html = wrap(`<p>${esc(hello)}</p><p>${p1}</p>${rec}<p>${p2}</p><p>${p3}</p><p>${bye}</p>`);
+  const rec = `<div style="margin:0 0 16px;padding:14px 18px;background:#F3F4F6;border-radius:10px"><p style="margin:0 0 8px;font-weight:bold">${esc(L.t)}</p><table style="border-collapse:collapse;font-size:15px">${recap.map(([k, v]) => row(k, nl2br(v))).join('')}</table></div>`;
+  const html = wrap(`<p>${esc(hello)}</p><p>${p1}</p>${rec}<p>${p2}</p><p>${p3}</p><p>${bye}</p>`, lang);
   const strip = (s) => s.replace(/<br>/g, '\n').replace(/<[^>]+>/g, '');
-  const text = [hello, '', p1, ''].concat(recap, recap.length ? [''] : [], [strip(p2), '', strip(p3), '', strip(bye)]).join('\n');
+  const text = [hello, '', p1, '', L.t + ' :'].concat(recap.map(([k, v]) => `${k} : ${v}`), ['', strip(p2), '', strip(p3), '', strip(bye)]).join('\n') + textFooter;
   return { html, text };
 }
 
