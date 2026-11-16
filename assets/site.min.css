@@ -16,20 +16,6 @@
 .rz-h p{margin:0;color:var(--mute);max-width:52ch;font-size:16px;line-height:1.55}
 @media(max-width:900px){.rz-h{grid-template-columns:1fr}}
 
-/* composition 3D « maquette » : bureau + second écran + téléphone */
-.ipv{position:relative;aspect-ratio:1.28/1;perspective:1100px}
-.ipv__3d{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .35s ease-out;animation:ipvf 9s ease-in-out infinite}
-@keyframes ipvf{50%{transform:rotateX(calc(var(--rx,0deg) + 2deg)) rotateY(calc(var(--ry,0deg) - 3deg)) translateY(-6px)}}
-.ipv__l{position:absolute;display:block;overflow:hidden;background:var(--paper);border:1px solid rgba(10,10,11,.14);box-shadow:0 2px 4px rgba(10,10,11,.05),0 22px 44px -18px rgba(10,10,11,.34)}
-.ipv__l picture,.ipv__l img{display:block;width:100%;height:100%;object-fit:cover}
-.ipv__d{left:0;top:0;width:84%;border-radius:14px;aspect-ratio:16/10;transform:translateZ(0)}
-.ipv__d::before{content:"";position:absolute;inset:0 0 auto 0;height:22px;z-index:1;background:var(--soft);border-bottom:1px solid rgba(10,10,11,.1)}
-.ipv__d::after{content:"";position:absolute;left:11px;top:7px;z-index:2;width:8px;height:8px;border-radius:50%;background:#ff5f57;box-shadow:14px 0 0 #febc2e,28px 0 0 #28c840}
-.ipv__d img{padding-top:22px;background:var(--soft)}
-.ipv__s{left:6%;bottom:0;width:50%;border-radius:12px;transform:translateZ(46px) rotate(-3deg)}
-.ipv__m{right:0;bottom:-3%;width:24%;aspect-ratio:390/844;border-radius:22px;border:3px solid var(--ink);transform:translateZ(90px) rotate(2deg)}
-.ipv__tag{position:absolute;z-index:3;right:4%;top:-2%;transform:translateZ(120px) rotate(4deg);font:500 11.5px var(--f-m);letter-spacing:.06em;text-transform:uppercase;background:var(--paper);border:1px solid rgba(10,10,11,.16);border-radius:99px;padding:6px 12px;box-shadow:0 8px 20px -10px rgba(10,10,11,.35)}
-@media(prefers-reduced-motion:reduce){.ipv__3d{animation:none;transition:none}}
 
 .ipb{display:inline-flex;align-items:center;gap:9px;font:500 12px var(--f-m);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:99px;padding:8px 14px;background:var(--paper)}
 .ipb i{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(249,131,5,.55);animation:ipp 1.9s infinite}
@@ -40,12 +26,10 @@
 .wp{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:center}
 .wp__t .lead{margin-top:18px}.wp__t .ipb{margin-top:22px}
 .wp__a{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:26px}
-@media(max-width:900px){.wp{grid-template-columns:1fr}.wp .ipv{max-width:560px;margin:0 auto;width:100%}}
 
 /* page Sites : projets en cours */
 .ip-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
 .ip{display:flex;flex-direction:column;gap:clamp(22px,3vw,34px);padding:clamp(22px,2.8vw,36px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,var(--paper),var(--soft))}
-.ip .ipv{width:100%}
 .ip h3{font:700 clamp(26px,2.8vw,36px)/1.05 var(--f-d);letter-spacing:-.02em;margin:14px 0 0}
 .ip p{margin:10px 0 0;color:var(--mute);font-size:16px;line-height:1.55}
 .ip .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -244,18 +228,30 @@ h3{font-weight:650;letter-spacing:-.015em}
 .hero .stage{box-shadow:var(--sh)}
 /* === fin v27 glam === */
 /* === v27 accueil : bandeau discret + print en avant === */
-.wps{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(16px,3vw,36px);padding:16px clamp(18px,2.6vw,30px);border:1px solid var(--line);border-radius:22px;background:var(--paper)}
-.wps__th{position:relative;display:block;width:clamp(120px,12vw,160px);height:84px;flex:none}
-.wps__d{position:absolute;left:0;top:6px;width:132px;aspect-ratio:16/10;border-radius:10px;overflow:hidden;border:1px solid rgba(10,10,11,.12);box-shadow:0 10px 22px -12px rgba(10,10,11,.4)}
-.wps__m{position:absolute;right:0;bottom:0;width:38px;aspect-ratio:390/844;border-radius:8px;overflow:hidden;border:2px solid var(--ink);box-shadow:0 8px 18px -8px rgba(10,10,11,.45)}
-.wps__d picture,.wps__m picture,.wps__d img,.wps__m img{display:block;width:100%;height:100%;object-fit:cover}
+.wps{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(16px,3vw,36px);padding:16px clamp(18px,2.6vw,30px);border:1px solid var(--line);border-radius:22px;background:var(--paper)}
 .wps__t{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
 .wps__t .ipb{padding:6px 12px;font-size:11px}
 .wps__t h2{font:650 clamp(20px,2vw,26px)/1.1 var(--f-d);letter-spacing:-.015em;margin:0;max-width:none}
 .wps__t p{flex:1 0 100%;margin:0;color:var(--mute);font-size:15px}
 .wps__go{display:inline-flex;align-items:center;gap:8px;font:550 15px var(--f-b);color:var(--ink);text-decoration:none;white-space:nowrap;padding:10px 16px;border:1px solid var(--line);border-radius:999px;transition:background .25s,color .25s,border-color .25s}
 .wps__go:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-@media(max-width:700px){.wps{grid-template-columns:minmax(0,1fr);gap:14px}.wps__th{display:none}.wps__go{justify-self:start}}
+@media(max-width:700px){.wps{grid-template-columns:minmax(0,1fr);gap:14px}.wps__go{justify-self:start}}
 @media(min-width:701px){.pk__s{flex-basis:clamp(320px,46vw,580px)}.pk__track{padding-left:calc(50% - clamp(160px,23vw,290px));padding-right:calc(50% - clamp(160px,23vw,290px))}}
 /* === fin v27 accueil === */
 @media(max-width:700px){.cta .dc{display:none}}
+
+/* === v27 projets en cours (sans images) === */
+.ip{padding:0;gap:0;overflow:hidden;background:var(--paper)}
+.ip__p{position:relative;display:grid;place-items:center;height:clamp(150px,16vw,200px);background:radial-gradient(120% 140% at 15% 0%,var(--a),transparent 62%),radial-gradient(110% 130% at 100% 100%,color-mix(in srgb,var(--b) 70%,transparent),transparent 60%),var(--a)}
+.ip__p span{font:700 clamp(40px,6vw,76px)/1 var(--f-d);letter-spacing:-.04em;color:var(--t);opacity:.9}
+.ip__p::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 1px 1px,rgba(10,10,11,.1) 1px,transparent 1.4px) 0 0/18px 18px;opacity:.5}
+.ip__b{padding:clamp(20px,2.4vw,30px)}
+.ip__b .ipb{margin:0}
+.ip__s{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:22px 0 0;padding:0;position:relative}
+.ip__s::before{content:"";position:absolute;left:8px;right:8px;top:8px;height:2px;background:var(--line)}
+.ip__s li{position:relative;padding-top:26px;font:500 11.5px var(--f-m);letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.ip__s li i{position:absolute;left:0;top:1px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--line);box-sizing:border-box}
+.ip__s li.done{color:var(--ink)}.ip__s li.done i{background:var(--ink);border-color:var(--ink)}
+.ip__s li.now{color:var(--ink)}.ip__s li.now i{background:var(--orange);border-color:var(--orange);box-shadow:0 0 0 5px rgba(249,131,5,.2)}
+@media(max-width:560px){.ip__s{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}.ip__s::before{display:none}}
+/* === fin v27 projets en cours === */
