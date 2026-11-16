@@ -92,3 +92,5 @@
 .ip__s li.now{color:var(--ink)}.ip__s li.now i{background:var(--orange);border-color:var(--orange);box-shadow:0 0 0 5px rgba(249,131,5,.2)}
 @media(max-width:560px){.ip__s{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}.ip__s::before{display:none}}
 /* === fin v27 projets en cours === */
+
+.stats__note{margin:26px 0 0;max-width:86ch;font:400 13px/1.6 var(--f-b);color:inherit;opacity:.66}

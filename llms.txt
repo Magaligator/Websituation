@@ -14,6 +14,7 @@
 
 ## Réalisations
 - [Sites réalisés](https://www.websituation.ch/sites.html) : [Le Bod](https://www.websituation.ch/etude-de-cas-le-bod.html), [A. Murith SA](https://www.websituation.ch/etude-de-cas-murith-pompes-funebres.html), [Murith Prévoyance](https://www.websituation.ch/etude-de-cas-murith-prevoyance.html), [Mybodytree](https://www.websituation.ch/etude-de-cas-mybodytree.html)
+- [Étude de cas : le cube 3D de Websituation](https://www.websituation.ch/etude-de-cas-cube-3d-websituation.html)
 - [Réalisations print et identité](https://www.websituation.ch/realisations.html)
 
 ## Blog
@@ -23,9 +24,14 @@
 - [Protection des données et site web (nLPD)](https://www.websituation.ch/blog-protection-donnees-site-suisse.html)
 - [Réseaux sociaux : choisir ses canaux](https://www.websituation.ch/blog-reseaux-sociaux-choisir-canaux.html)
 
+- [Créer un site internet 3D : guide pour PME](https://www.websituation.ch/blog-creer-site-internet-3d.html)
+- [Site 3D et SEO : risques et bonnes pratiques](https://www.websituation.ch/blog-site-3d-seo.html)
+- [Configurateur 3D de produit pour PME suisses](https://www.websituation.ch/blog-configurateur-3d-produit.html)
+- [Combien coûte un site internet 3D en Suisse ?](https://www.websituation.ch/blog-prix-site-internet-3d-suisse.html)
+
 ## Agence
 - [À propos](https://www.websituation.ch/a-propos.html)
 - [Contact](https://www.websituation.ch/contact.html) : consultation gratuite, +41 79 879 00 79, contact@websituation.ch, Cologny (Genève)
 
 ## English
-- [Home](https://www.websituation.ch/en/) · [Website design](https://www.websituation.ch/en/website-design-geneva.html) · [Responsive showcase website](https://www.websituation.ch/en/responsive-showcase-website-geneva.html) · [E-commerce website](https://www.websituation.ch/en/ecommerce-website-geneva.html) · [SEO](https://www.websituation.ch/en/seo-geneva.html) · [Print](https://www.websituation.ch/en/print-branding-geneva.html) · [Digital campaigns](https://www.websituation.ch/en/digital-campaigns-geneva.html) · [Pricing](https://www.websituation.ch/en/pricing.html) · [About](https://www.websituation.ch/en/about.html) · [Contact](https://www.websituation.ch/en/contact.html)
+- [Home](https://www.websituation.ch/en/) · [Website design](https://www.websituation.ch/en/website-design-geneva.html) · [Responsive showcase website](https://www.websituation.ch/en/responsive-showcase-website-geneva.html) · [E-commerce website](https://www.websituation.ch/en/ecommerce-website-geneva.html) · [SEO](https://www.websituation.ch/en/seo-geneva.html) · [Print](https://www.websituation.ch/en/print-branding-geneva.html) · [Digital campaigns](https://www.websituation.ch/en/digital-campaigns-geneva.html) · [Pricing](https://www.websituation.ch/en/pricing.html) · [About](https://www.websituation.ch/en/about.html) · [Contact](https://www.websituation.ch/en/contact.html) · [3D website design in Switzerland](https://www.websituation.ch/en/3d-website-design-switzerland.html) · [Guide: how to create a 3D website](https://www.websituation.ch/en/blog-create-3d-website.html) · [Case study: the 3D cube](https://www.websituation.ch/en/case-study-websituation-3d-cube.html)

@@ -204,3 +204,26 @@ Réserve : le LCP est tout juste à la limite de 2,5 s en lab. La mesure officie
 4. Résultats mesurés sur un projet 3D (section « Ce que la 3D apporte »).
 5. Justification des chiffres de l'accueil « +50 structures », « 100 % satisfaits », « 30 % de temps gagné ».
 6. Nouveaux avis Google.
+
+
+## 13. P2, P3 et GEO : état au 16 novembre 2026 (branche `modifs-site`)
+
+| Tâche du plan | État | Preuve |
+|---|---|---|
+| Accueil : 3D dans le title, la description et le sous-titre (FR/EN), sans toucher au H1 « Genève » | Fait | `index.html`, `en/index.html` |
+| Étude de cas 3D (projet vitrine propre à l'agence : le cube de l'accueil), FR/EN | Fait | `etude-de-cas-cube-3d-websituation.html`, `en/case-study-websituation-3d-cube.html`, bandeau dans `sites.html` / `en/websites.html` |
+| Guide blog « créer un site internet 3D » (1 500+ mots FR), FR/EN | Fait | `blog-creer-site-internet-3d.html`, `en/blog-create-3d-website.html` |
+| 3 articles satellites (SEO, configurateur, prix), FR/EN | Fait | `blog-site-3d-seo.html`, `blog-configurateur-3d-produit.html`, `blog-prix-site-internet-3d-suisse.html` et versions `en/` |
+| `blog.html` : intro et cartes 3D (FR/EN) | Fait | `blog.html`, `en/blog.html` |
+| Page 3D : liens vers guide, satellites, étude de cas, prix ; `TODO(client)` retirés | Fait | `creation-site-internet-3d-suisse.html`, `en/3d-website-design-switzerland.html` |
+| Maillage : au moins 8 liens contextuels vers la page 3D | Fait | 6 pages de services + guide, 3 satellites, étude de cas, blog |
+| Sitemap, hreflang, JSON-LD (BlogPosting/Article, FAQPage, BreadcrumbList) des 10 nouvelles pages | Fait | `sitemap.xml` (63 URL), pages `blog-*3d*`, validation 0 erreur |
+| `Organization` : `hasMap` (fiche Google) ajouté, `sameAs` conservé | Fait | JSON-LD de toutes les pages |
+| `llms.txt` : nouvelles pages FR/EN | Fait | `llms.txt` |
+| P3 : canvas différé, glTF/Draco | Sans objet | le cube est en CSS 3D, sans canvas ni modèle (voir l'étude de cas) |
+| P3 : `prefers-reduced-motion`, texte hors de la scène, repli | Fait pour le cube | `assets/app.js`, étude de cas |
+| Chiffres de l'accueil : « 30 % » et « 100 % » justifiés par une note, repère externe Picmim 2026 | Fait | notes sous les chiffres de l'accueil et de À propos (FR/EN) ; « +50 structures » reste à justifier |
+| P4 : fiche Google Business, annuaires, backlinks, avis | À faire (hors site) | actions de la propriétaire de la fiche |
+| P0/P1/P5 : Search Console (export, envoi du sitemap), test des résultats enrichis, GA4, suivi, tests moteurs IA | À faire (hors dépôt) | après mise en ligne |
+
+Contrôle automatique du dépôt (66 pages) : un seul H1, titres et descriptions uniques, JSON-LD valides, 0 lien interne cassé, 0 image sans `alt`, hreflang réciproques, toutes les pages dans le sitemap. L'article « vitesse » (`blog-vitesse-site-internet.html`) n'est pas inclus : son hreflang EN pointe vers une page inexistante.
