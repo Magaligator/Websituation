@@ -202,7 +202,7 @@ Réserve : le LCP est tout juste à la limite de 2,5 s en lab. La mesure officie
 2. Au moins un projet 3D, client ou démo propre à l'agence, avec capture, technologies et résultats (section « Un exemple de 3D… »). Aujourd'hui seul le cube de l'accueil est cité, comme exemple de 3D en CSS.
 3. Technologies réellement maîtrisées (Three.js, Spline, WebGL, autre) et qui produit les modèles 3D.
 4. Résultats mesurés sur un projet 3D (section « Ce que la 3D apporte »).
-5. Justification des chiffres de l'accueil « +50 structures », « 100 % satisfaits », « 30 % de temps gagné ».
+5. Chiffres de l'accueil : « +50 structures » retiré ; « 100 % satisfaits » et « 30 % de temps gagné » justifiés par une note (voir section 13).
 6. Nouveaux avis Google.
 
 
@@ -222,8 +222,8 @@ Réserve : le LCP est tout juste à la limite de 2,5 s en lab. La mesure officie
 | `llms.txt` : nouvelles pages FR/EN | Fait | `llms.txt` |
 | P3 : canvas différé, glTF/Draco | Sans objet | le cube est en CSS 3D, sans canvas ni modèle (voir l'étude de cas) |
 | P3 : `prefers-reduced-motion`, texte hors de la scène, repli | Fait pour le cube | `assets/app.js`, étude de cas |
-| Chiffres de l'accueil : « 30 % » et « 100 % » justifiés par une note, repère externe Picmim 2026 | Fait | notes sous les chiffres de l'accueil et de À propos (FR/EN) ; « +50 structures » reste à justifier |
+| Chiffres de l'accueil : « 30 % » et « 100 % » justifiés par une note, repère externe Picmim 2026 | Fait | notes sous les chiffres de l'accueil et de À propos (FR/EN) ; « +50 structures » retiré du site le 2026-11-16 |
 | P4 : fiche Google Business, annuaires, backlinks, avis | À faire (hors site) | actions de la propriétaire de la fiche |
 | P0/P1/P5 : Search Console (export, envoi du sitemap), test des résultats enrichis, GA4, suivi, tests moteurs IA | À faire (hors dépôt) | après mise en ligne |
 
-Contrôle automatique du dépôt (66 pages) : un seul H1, titres et descriptions uniques, JSON-LD valides, 0 lien interne cassé, 0 image sans `alt`, hreflang réciproques, toutes les pages dans le sitemap. L'article « vitesse » (`blog-vitesse-site-internet.html`) n'est pas inclus : son hreflang EN pointe vers une page inexistante.
+Contrôle automatique du dépôt (66 pages) : un seul H1, titres et descriptions uniques, JSON-LD valides, 0 lien interne cassé, 0 image sans `alt`, hreflang réciproques, toutes les pages dans le sitemap. L'article « Vitesse de votre site internet » (`blog-vitesse-de-votre-site-internet.html`) et sa version anglaise (`en/blog-website-speed.html`) ont été ajoutés le 2026-11-16 (blog, sitemap, hreflang réciproques, `llms.txt`). Contrôle des textes alternatifs : 0 image sans `alt` ; les `alt=""` restants sont décoratifs (logo à côté du nom, doublons `aria-hidden`).

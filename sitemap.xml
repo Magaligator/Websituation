@@ -468,4 +468,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/case-study-websituation-3d-cube.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/etude-de-cas-cube-3d-websituation.html"/>
   </url>
+  <url>
+    <loc>https://www.websituation.ch/blog-vitesse-de-votre-site-internet.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/blog-vitesse-de-votre-site-internet.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/blog-website-speed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/blog-vitesse-de-votre-site-internet.html"/>
+  </url>
+  <url>
+    <loc>https://www.websituation.ch/en/blog-website-speed.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.websituation.ch/blog-vitesse-de-votre-site-internet.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.websituation.ch/en/blog-website-speed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.websituation.ch/blog-vitesse-de-votre-site-internet.html"/>
+  </url>
 </urlset>
