@@ -9,3 +9,4 @@
 .req{color:var(--red);font-weight:700}
 @media(max-width:700px){.home .sites-row{grid-template-columns:1fr;gap:26px}.home .sites-row .s:nth-child(3){display:none}}
 .ok.is-err{background:#FFD9D6}.ok a{text-decoration:underline}.formule-note{font-weight:700;color:var(--ink)}
+/* Héro : visible dès le premier rendu (LCP), animation sans masquage ni attente du JS */@keyframes heroUp{from{transform:translateY(22px)}to{transform:none}}.hero .rv{opacity:1;transform:none;transition:none;animation:heroUp .7s cubic-bezier(.2,.7,.2,1) both}.hero .rv.d1{animation-delay:.06s}.hero .rv.d2{animation-delay:.12s}.hero .rv.d3{animation-delay:.18s}@media(prefers-reduced-motion:reduce){.hero .rv{animation:none}}
