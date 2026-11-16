@@ -196,7 +196,7 @@ a.cc:hover,
 a.k2:hover,
 .tbl-arr:active{box-shadow:var(--sh-h)}
 /* typographie : même famille, plus légère et plus aérée */
-h1{font-weight:700;letter-spacing:-.035em;line-height:1.02;font-size:clamp(42px,6.2vw,96px)}
+h1{font-weight:700;letter-spacing:-.035em;line-height:1.02;font-size:clamp(40px,5.6vw,84px)}
 h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(32px,4.4vw,64px)}
 h3{font-weight:650;letter-spacing:-.015em}
 .lead{font-size:clamp(17px,1.45vw,20px);line-height:1.6;color:var(--mute)}
