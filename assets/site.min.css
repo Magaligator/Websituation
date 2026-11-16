@@ -17,7 +17,7 @@
 @media(max-width:900px){.rz-h{grid-template-columns:1fr}}
 
 
-.ipb{display:inline-flex;align-items:center;gap:9px;font:500 12px var(--f-m);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:99px;padding:8px 14px;background:var(--paper)}
+.ipb{display:inline-flex;align-items:center;gap:9px;font:500 12px var(--f-m);letter-spacing:.06em;text-transform:uppercase;border:var(--bw) solid var(--ink);border-radius:99px;padding:8px 14px;background:var(--paper)}
 .ipb i{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(249,131,5,.55);animation:ipp 1.9s infinite}
 @keyframes ipp{70%{box-shadow:0 0 0 9px rgba(249,131,5,0)}100%{box-shadow:0 0 0 0 rgba(249,131,5,0)}}
 @media(prefers-reduced-motion:reduce){.ipb i{animation:none}}
@@ -29,7 +29,7 @@
 
 /* page Sites : projets en cours */
 .ip-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
-.ip{display:flex;flex-direction:column;gap:clamp(22px,3vw,34px);padding:clamp(22px,2.8vw,36px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,var(--paper),var(--soft))}
+.ip{display:flex;flex-direction:column;gap:clamp(22px,3vw,34px);padding:clamp(22px,2.8vw,36px);border:var(--bw) solid var(--ink);border-radius:26px;background:var(--paper);box-shadow:5px 5px 0 var(--ink)}
 .ip h3{font:700 clamp(26px,2.8vw,36px)/1.05 var(--f-d);letter-spacing:-.02em;margin:14px 0 0}
 .ip p{margin:10px 0 0;color:var(--mute);font-size:16px;line-height:1.55}
 .ip .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -64,184 +64,21 @@
 #enligne{margin-top:clamp(36px,5vw,64px)}
 /* === fin v27 composants === */
 .rz-sec{scroll-margin-top:100px}
-/* === v27 glam === */
-:root{--bw:1px;--rad:20px;--ln:rgba(10,10,11,.14);
---sh:0 1px 2px rgba(10,10,11,.05),0 16px 36px -20px rgba(10,10,11,.34);
---sh-h:0 2px 4px rgba(10,10,11,.06),0 26px 50px -22px rgba(10,10,11,.42);
---sy:clamp(64px,8vw,116px)}
-body{background:#F7F8FA}
-/* contours fins, ombres douces */
-.btn,
-.hdr__in,
-.lang,
-.burger,
-.chip,
-.kick b,
-.stage,
-.stage__tag,
-.mq,
-.tile,
-.ill-win,
-.ill-serp div,
-.ill-cards i,
-.seg,
-.seg button,
-.devbox,
-.mock,
-.mock__bar,
-.mock__hero,
-.mock__hero em,
-.mock__cards div,
-.proj__stage,
-.proj__meta .more,
-.filters button,
-.pdlg__x,
-.step,
-.step__n,
-.plan,
-.plan__badge,
-.tbl-w,
-.quiz,
-.opt,
-.quiz__res,
-.xp__tab,
-.xp__panel,
-.post,
-.post__img,
-.post--feat .post__img,
-details,
-.cta,
-.cta .dc,
-.cc,
-.cc .ic,
-form,
-.chips span,
-.fld input,.fld textarea,
-.ok,
-.foot,
-.nav.open,
-.bm,
-.bm__bar,
-.bm__go,
-.jump a,
-.case__stage,
-.case__chip,
-.fact,
-.soonc,
-.art__cover,
-.toc,
-.callout,
-.author,
-.rev,
-.ch__n,
-.k2,
-.num,
-.path__dot,
-.tbl-arr,
-.dvx__f[data-d=desktop],
-.dvx__bar{border-color:var(--ln)}
-.btn,
-.btn--sm,
-.hdr__in,
-.stage,
-.stage__tag,
-.tile,
-.ill-win,
-.ill-serp div,
-.ill-cards i,
-.seg,
-.mock,
-.proj__stage,
-.proj__meta .more,
-.plan,
-.tbl-w,
-.quiz,
-.opt,
-.xp__tab,
-.xp__panel,
-.post,
-.cta,
-.cc,
-form,
-.bm,
-.bm__go,
-.case__stage,
-.case__stage .bm,
-.case__chip,
-.fact,
-.art__cover,
-.toc,
-.callout,
-.author,
-.rev,
-.ch__n,
-.k2,
-.num,
-.path__dot,
-.tbl-arr,
-.dvx__f[data-d=desktop],
-.proc .step__n{box-shadow:var(--sh)}
-.btn:hover,
-.tile:hover,
-.proj:hover .proj__stage,
-.step.on,
-.opt:hover,
-.xp__tab:hover,
-.post:hover,
-details[open],
-a.cc:hover,
-.chips input:checked + span,
-.nav.open,
-.sites-row .s:hover .bm,
-a.k2:hover,
-.tbl-arr:active{box-shadow:var(--sh-h)}
-/* typographie : même famille, plus légère et plus aérée */
-h1{font-weight:700;letter-spacing:-.035em;line-height:1.02;font-size:clamp(40px,5.6vw,84px)}
-h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(32px,4.4vw,64px)}
-h3{font-weight:650;letter-spacing:-.015em}
-.lead{font-size:clamp(17px,1.45vw,20px);line-height:1.6;color:var(--mute)}
-.mark{background:linear-gradient(transparent 64%,color-mix(in srgb,var(--yellow) 85%,white) 64%);padding:0 .04em;border-radius:0;transform:none}
-.mark--b{background:linear-gradient(transparent 64%,rgba(41,88,230,.22) 64%)}
-.mark--r{background:linear-gradient(transparent 64%,rgba(255,23,22,.2) 64%)}
-.mark--o{background:linear-gradient(transparent 64%,rgba(249,131,5,.26) 64%)}
-.mark--g{background:linear-gradient(transparent 64%,rgba(40,197,76,.26) 64%)}
-.chip,.kick b{font-weight:500;letter-spacing:.09em}
-/* navigation en verre dépoli */
-.hdr__in{background:rgba(250,251,252,.78);-webkit-backdrop-filter:saturate(1.5) blur(16px);backdrop-filter:saturate(1.5) blur(16px);border-radius:20px}
-.lang{box-shadow:none}
-/* boutons */
-.btn{font-weight:550;font-size:16px;padding:13px 24px;border-radius:999px;border-color:var(--ln);box-shadow:0 1px 2px rgba(10,10,11,.05);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(10,10,11,.4)}
-.btn--b{border-color:transparent;box-shadow:0 10px 24px -12px rgba(41,88,230,.7)}
-.btn--b:hover{box-shadow:0 18px 32px -14px rgba(41,88,230,.75)}
-.btn--y{border-color:rgba(10,10,11,.8)}
-.btn--k{border-color:transparent}
-.btn--sm{padding:10px 18px;font-size:15px}
-/* cartes : relief doux au survol */
-.tile,.post,.cc,.k2,.plan,.rev{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
-.tile:hover,.post:hover,a.cc:hover,a.k2:hover{transform:translateY(-4px)}
-.tile{border-color:transparent}
-/* surfaces sombres */
-.pk,dialog.pdlg{border-color:rgba(255,255,255,.14);box-shadow:var(--sh)}
-/* apparitions plus discrètes */
-.rv{transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.hero .stage{box-shadow:var(--sh)}
-/* === fin v27 glam === */
 /* === v27 accueil : bandeau discret + print en avant === */
-.wps{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(16px,3vw,36px);padding:16px clamp(18px,2.6vw,30px);border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.wps{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(16px,3vw,36px);padding:16px clamp(18px,2.6vw,30px);border:var(--bw) solid var(--ink);border-radius:var(--rad);background:var(--paper);box-shadow:4px 4px 0 var(--ink)}
 .wps__t{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
 .wps__t .ipb{padding:6px 12px;font-size:11px}
 .wps__t h2{font:650 clamp(20px,2vw,26px)/1.1 var(--f-d);letter-spacing:-.015em;margin:0;max-width:none}
 .wps__t p{flex:1 0 100%;margin:0;color:var(--mute);font-size:15px}
-.wps__go{display:inline-flex;align-items:center;gap:8px;font:550 15px var(--f-b);color:var(--ink);text-decoration:none;white-space:nowrap;padding:10px 16px;border:1px solid var(--line);border-radius:999px;transition:background .25s,color .25s,border-color .25s}
+.wps__go{display:inline-flex;align-items:center;gap:8px;font:550 15px var(--f-b);color:var(--ink);text-decoration:none;white-space:nowrap;padding:10px 16px;border:var(--bw) solid var(--ink);border-radius:999px;transition:background .25s,color .25s,border-color .25s}
 .wps__go:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 @media(max-width:700px){.wps{grid-template-columns:minmax(0,1fr);gap:14px}.wps__go{justify-self:start}}
 @media(min-width:701px){.pk__s{flex-basis:clamp(320px,46vw,580px)}.pk__track{padding-left:calc(50% - clamp(160px,23vw,290px));padding-right:calc(50% - clamp(160px,23vw,290px))}}
 /* === fin v27 accueil === */
-@media(max-width:700px){.cta .dc{display:none}}
 
 /* === v27 projets en cours (sans images) === */
 .ip{padding:0;gap:0;overflow:hidden;background:var(--paper)}
+.ip__p{border-bottom:var(--bw) solid var(--ink)}
 .ip__p{position:relative;display:grid;place-items:center;height:clamp(150px,16vw,200px);background:radial-gradient(120% 140% at 15% 0%,var(--a),transparent 62%),radial-gradient(110% 130% at 100% 100%,color-mix(in srgb,var(--b) 70%,transparent),transparent 60%),var(--a)}
 .ip__p span{font:700 clamp(40px,6vw,76px)/1 var(--f-d);letter-spacing:-.04em;color:var(--t);opacity:.9}
 .ip__p::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 1px 1px,rgba(10,10,11,.1) 1px,transparent 1.4px) 0 0/18px 18px;opacity:.5}

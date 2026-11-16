@@ -35,7 +35,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/bricolage-grotesque-400-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/instrument-sans-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.min.css?v=u32">
+<link rel="stylesheet" href="../assets/site.min.css?v=u33">
 <noscript><style>.rv{opacity:1!important;transform:none!important}.step{opacity:1!important;transform:none!important}</style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.websituation.ch/#org","name":"Websituation","url":"https://www.websituation.ch/","logo":{"@type":"ImageObject","url":"https://www.websituation.ch/assets/logo.png","width":500,"height":500},"image":"https://www.websituation.ch/assets/og-image.png","description":"Digital marketing agency in Geneva: website creation, Google SEO, print materials and campaigns on subscription. Published prices, dedicated manager.","telephone":"+41798790079","email":"contact@websituation.ch","address":{"@type":"PostalAddress","addressLocality":"Cologny","postalCode":"1223","addressRegion":"GE","addressCountry":"CH"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"18:30"}],"areaServed":[{"@type":"City","name":"Genève"},{"@type":"AdministrativeArea","name":"Suisse romande"}],"knowsLanguage":["fr","en"],"priceRange":"CHF 399 – CHF 2350","vatID":"CHE-326.814.201","contactPoint":{"@type":"ContactPoint","contactType":"customer service","telephone":"+41798790079","email":"contact@websituation.ch","availableLanguage":["fr","en"],"areaServed":"CH"},"founder":{"@id":"https://www.websituation.ch/a-propos.html#magali"},"sameAs":["https://www.google.com/maps/place/Websituation+-+Marketing+digital/data=!4m2!3m1!1s0x0:0xb0b1c05d31c3b94f"]},{"@type":"Person","@id":"https://www.websituation.ch/a-propos.html#magali","name":"Magali Tshikudi Kabondo","alternateName":"Magali Murith","jobTitle":"Founder","url":"https://www.websituation.ch/en/about.html","worksFor":{"@id":"https://www.websituation.ch/#org"}},{"@type":"WebSite","@id":"https://www.websituation.ch/#website","url":"https://www.websituation.ch/","name":"Websituation","inLanguage":["fr","en"],"publisher":{"@id":"https://www.websituation.ch/#org"}},{"@type":"CollectionPage","@id":"https://www.websituation.ch/en/work.html#webpage","url":"https://www.websituation.ch/en/work.html","name":"Print, Identity & Brochure Work | Websituation","description":"Stationery, brochures, promotional items and visual identities created for companies in French-speaking Switzerland by Websituation, Geneva.","inLanguage":"en","isPartOf":{"@id":"https://www.websituation.ch/#website"},"about":{"@id":"https://www.websituation.ch/#org"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.websituation.ch/assets/og-image.png"},"breadcrumb":{"@id":"https://www.websituation.ch/en/work.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.websituation.ch/en/work.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.websituation.ch/en/"},{"@type":"ListItem","position":2,"name":"Print, Identity & Brochure Work","item":"https://www.websituation.ch/en/work.html"}]}]}</script>
 </head>
@@ -74,7 +74,7 @@
   <h1 class="rv">Identity, brochures and <span class="mark mark--o">print</span> work in Geneva.</h1><p class="lead rv d1">Business cards, leaflets, flyers and objects: the pieces your customers hold in their hands, designed so your brand is recognised everywhere. Click a project to enlarge it. Websites have their own page.</p></div></section>
 <section style="padding-top:0"><div class="wrap"><style>
 .rz-jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(32px,4.5vw,56px)}
-.rz-jump a{font:500 13px var(--f-b);padding:9px 16px;border:1px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);text-decoration:none;transition:background .25s,border-color .25s,color .25s}
+.rz-jump a{font:500 13px var(--f-b);padding:9px 16px;border:var(--bw) solid var(--ink);border-radius:99px;background:var(--paper);color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 var(--ink);transition:background .25s,color .25s,transform .15s,box-shadow .15s}
 .rz-jump a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
 .rz-jump .ext{margin-left:auto;border-style:dashed}
 .rz-sec{padding-top:clamp(44px,5.5vw,84px);scroll-margin-top:100px}
@@ -85,10 +85,10 @@
 .rz-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(14px,1.8vw,24px)}
 .rz{--acc:var(--yellow);grid-column:span 4;position:relative;cursor:pointer;outline:none;min-width:0}
 .rz[data-acc=blue]{--acc:var(--blue)}.rz[data-acc=red]{--acc:var(--red)}.rz[data-acc=orange]{--acc:var(--orange)}.rz[data-acc=green]{--acc:var(--green)}
-.rz__img{position:relative;height:100%;aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:var(--soft);box-shadow:0 1px 2px rgba(10,10,11,.05),0 20px 44px -22px rgba(10,10,11,.4);transition:box-shadow .5s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.rz__img{position:relative;height:100%;aspect-ratio:4/3;border:var(--bw) solid var(--ink);border-radius:var(--rad);overflow:hidden;background:var(--soft);box-shadow:5px 5px 0 var(--ink);transition:box-shadow .2s,transform .2s}
 .rz__img picture,.rz__img img{display:block;width:100%;height:100%;object-fit:cover}
 .rz__img img{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
-.rz:hover .rz__img,.rz:focus-visible .rz__img{box-shadow:0 2px 4px rgba(10,10,11,.06),0 34px 64px -24px rgba(10,10,11,.5);transform:translateY(-4px)}
+.rz:hover .rz__img,.rz:focus-visible .rz__img{box-shadow:2px 2px 0 var(--ink);transform:translate(3px,3px)}
 .rz:hover .rz__img img{transform:scale(1.04)}
 .rz:focus-visible .rz__img{outline:2px solid var(--ink);outline-offset:3px}
 .rz__ov{position:absolute;inset:auto 0 0 0;padding:clamp(40px,6vw,84px) clamp(16px,2vw,28px) clamp(16px,2vw,26px);color:#fff;background:linear-gradient(to top,rgba(8,9,12,.8),rgba(8,9,12,.42) 55%,transparent)}
@@ -103,7 +103,7 @@
 .rz-g--b .rz:nth-child(-n+2){grid-column:span 6}.rz-g--b .rz:nth-child(-n+2) .rz__img{aspect-ratio:3/2}
 .rz-g--b .rz:nth-child(n+3){grid-column:span 4}.rz-g--b .rz__img img{object-position:50% 20%}
 .rz-g--1 .rz{grid-column:1/-1}.rz-g--1 .rz__img{aspect-ratio:21/9}.rz-g--1 .rz h3{font-size:clamp(24px,3vw,40px)}
-.rz-br{margin-top:clamp(52px,6vw,88px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;padding:clamp(20px,2.6vw,30px) clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.rz-br{margin-top:clamp(52px,6vw,88px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;padding:clamp(20px,2.6vw,30px) clamp(22px,3vw,36px);border:var(--bw) solid var(--ink);border-radius:var(--rad);background:var(--paper);box-shadow:4px 4px 0 var(--ink)}
 .rz-br h2{font:650 clamp(20px,2vw,26px)/1.15 var(--f-d);letter-spacing:-.015em;margin:0}
 .rz-br p{margin:6px 0 0;color:var(--mute);max-width:60ch;font-size:15px}
 @media(max-width:900px){
@@ -164,7 +164,7 @@
       <nav><a href="privacy-policy.html">Privacy policy</a><a href="legal.html">Legal notice</a></nav></div>
   </div>
 </footer>
-<script src="../assets/app.js?v=u32" defer></script>
+<script src="../assets/app.js?v=u33" defer></script>
 <script>(function(){var d=document.querySelector('dialog.pdlg');if(!d)return;var q=function(s){return d.querySelector(s)};
 [].forEach.call(document.querySelectorAll('.rz'),function(p){
  p.addEventListener('click',function(){q('.pdlg__img img').src=p.dataset.img;q('.pdlg__img img').alt=p.dataset.alt;q('.pdlg__cat').textContent=p.dataset.catl;q('.pdlg__t').textContent=p.dataset.title;q('.pdlg__d').textContent=p.dataset.desc;q('.pdlg__tags').innerHTML=p.dataset.tags.split('|').map(function(t){return '<span class="tag">'+t+'</span>'}).join('');d.showModal()});
