@@ -149,3 +149,32 @@ a.ip:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
 .calm-m{position:absolute;right:-14px;bottom:-26px;width:23%;height:auto;border:var(--bw) solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);background:var(--paper)}
 .calm-f figcaption{margin-top:18px;font-size:13px;color:var(--mute)}
 @media(max-width:860px){.demo--calm{grid-template-columns:1fr}.calm-m{right:6px;width:26%}}
+
+/* === v40 blog : en-tête compact === */
+.blog-ph{padding-bottom:0}
+.blog-ph h1{font-size:clamp(34px,4.6vw,66px);max-width:none;margin:14px 0 22px}
+.blog-intro{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(24px,5vw,72px);align-items:start;padding-bottom:6px}
+.blog-intro .lead{margin:0;max-width:34ch}
+.blog-intro__t p{margin:0 0 10px;font-size:16px;line-height:1.65;color:var(--mute);max-width:64ch}
+.blog-h2{font-size:clamp(26px,2.8vw,38px);margin:0 0 20px}
+@media(max-width:860px){.blog-intro{grid-template-columns:1fr;gap:14px}}
+.blog-s{padding-top:0!important}
+main>.blog-ph+.blog-s{padding-top:8px!important}
+
+/* === v43 projets en cours : teasers légers === */
+.ip--t .ip__p{height:clamp(96px,10vw,128px)}
+.ip--t .ip__p span{font-size:clamp(34px,4.4vw,56px)}
+.ip--t .ip__b{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:clamp(18px,2vw,26px)}
+.ip--t .ip__b p{margin:0;color:var(--mute);font-size:16px;line-height:1.55;max-width:44ch}
+.ip--t .ip__s{margin:4px 0 0;width:100%}
+.ip__cta{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:10px 16px;border:var(--bw) solid var(--ink);border-radius:999px;font:550 15px var(--f-b);transition:background .25s,color .25s}
+a.ip:hover .ip__cta{background:var(--ink);color:#fff}
+
+/* === v44 accueil : expertises en teaser === */
+.svt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.tile--s{grid-column:auto;min-height:190px;padding:22px;border-radius:20px;gap:18px}
+.tile--s h3{font-size:clamp(18px,1.6vw,22px);line-height:1.15;margin:6px 0 0}
+.tile--s p{font-size:15px;line-height:1.45;max-width:none;margin:0}
+.svt__cta{margin:28px 0 0}
+@media(max-width:1000px){.svt{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.svt{grid-template-columns:1fr}.tile--s{min-height:0}}
