@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/post/difference-entre-chat-gpt-et-gpt-openai-un-guide-essentiel",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
@@ -28,27 +28,22 @@
     },
     {
       "source": "/blog/categories/chat-gpt-vs-gpt-open-ai",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
       "source": "/nos-services",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/e-vitrine",
-      "destination": "/creation-site-internet-geneve.html",
+      "destination": "/creation-site-internet-geneve",
       "permanent": true
     },
     {
       "source": "/nos-abonnements",
-      "destination": "/abonnements.html",
+      "destination": "/abonnements",
       "permanent": true
     },
     {
@@ -58,127 +53,132 @@
     },
     {
       "source": "/blog/categories/5-points-pour-ameliorer-sa-visibilite-sur-google",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/post/nouvelle-loi-suisse-sur-la-protection-des-données-ce-que-les-entreprises-doivent-savoir",
-      "destination": "/blog-protection-donnees-site-suisse.html",
+      "destination": "/blog-protection-donnees-site-suisse",
       "permanent": true
     },
     {
       "source": "/post/nouvelle-loi-suisse-sur-la-protection-des-donn%C3%A9es-ce-que-les-entreprises-doivent-savoir",
-      "destination": "/blog-protection-donnees-site-suisse.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html",
+      "destination": "/blog-protection-donnees-site-suisse",
       "permanent": true
     },
     {
       "source": "/nos-services-1",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/politiques-confidentialite",
-      "destination": "/politique-de-confidentialite.html",
+      "destination": "/politique-de-confidentialite",
       "permanent": true
     },
     {
       "source": "/blog/categories/protections-des-donnees-en-suisse",
-      "destination": "/blog-protection-donnees-site-suisse.html",
+      "destination": "/blog-protection-donnees-site-suisse",
       "permanent": true
     },
     {
       "source": "/e-vitrine-1",
-      "destination": "/creation-site-internet-geneve.html",
+      "destination": "/creation-site-internet-geneve",
       "permanent": true
     },
     {
       "source": "/post/l-importance-d-être-parmi-les-3-premiers-de-la-serp-google",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/post/l-importance-d-%C3%AAtre-parmi-les-3-premiers-de-la-serp-google",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/nos-abonnements-1",
-      "destination": "/abonnements.html",
+      "destination": "/abonnements",
       "permanent": true
     },
     {
       "source": "/nos-realisations-1",
-      "destination": "/realisations.html",
+      "destination": "/realisations",
       "permanent": true
     },
     {
       "source": "/blog/categories/artificielle-intelligence",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
       "source": "/blog/categories/outil-crm",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/blog/categories/visibilite-sur-google",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/blog/categories/augmenter-sa-visibilit%C3%A9-sur-google",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/blog/categories/augmenter-sa-visibilité-sur-google",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/blog/categories/strategie-de-visibilite-en-ligne",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/blog/categories/gpt-open-ai",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
       "source": "/blog/categories/augmenter-la-visibilité-en-ligne",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/blog/categories/augmenter-la-visibilit%C3%A9-en-ligne",
-      "destination": "/blog-referencement-google-pme.html",
+      "destination": "/blog-referencement-google-pme",
       "permanent": true
     },
     {
       "source": "/blog/categories/intelligence-artificielle",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
       "source": "/blog/categories/chat-gpt",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
       "source": "/blog/categories/chatbot",
-      "destination": "/blog-chatgpt-vs-gpt-openai.html",
+      "destination": "/blog-chatgpt-vs-gpt-openai",
       "permanent": true
     },
     {
       "source": "/blog/categories/mise-en-conformite-de-la-nlpd",
-      "destination": "/blog-protection-donnees-site-suisse.html",
+      "destination": "/blog-protection-donnees-site-suisse",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/index",
+      "destination": "/en/",
       "permanent": true
     }
   ],
@@ -213,5 +213,6 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true
 }
