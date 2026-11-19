@@ -1,0 +1,62 @@
+name: Publier l'article du 24 novembre 2026
+
+# Publie l'article « Créer son site avec l'intelligence artificielle »
+# le mardi 24 novembre 2026 à 8h00, heure de Genève (07:00 UTC, heure d'hiver).
+# Le travail démarre à 06:30 UTC puis attend 07:00 UTC pile (les déclenchements
+# programmés de GitHub peuvent avoir du retard).
+# Lancement manuel possible : Actions > ce workflow > Run workflow
+#   (dry_run = true : teste la fusion sans rien publier).
+on:
+  schedule:
+    - cron: '30 6 24 11 *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Tester sans publier (true) ou publier tout de suite (false)'
+        default: 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Garde-fou (une seule fois, en 2026)
+        id: garde
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%Y)" != "2026" ]; then
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.garde.outputs.ok == 'true'
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Attendre 08:00 à Genève (07:00 UTC)
+        if: steps.garde.outputs.ok == 'true' && github.event_name == 'schedule'
+        run: |
+          target=$(date -u -d "2026-11-24 07:00:00" +%s)
+          now=$(date -u +%s)
+          if [ "$now" -lt "$target" ] && [ $((target - now)) -lt 3600 ]; then
+            echo "Attente de $((target - now)) s"
+            sleep $((target - now))
+          fi
+
+      - name: Fusionner la branche de l'article dans main
+        if: steps.garde.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin article-24-novembre
+          git merge --no-edit origin/article-24-novembre
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "Test à blanc : fusion réussie, rien n'est publié."
+            git diff --stat origin/main HEAD | tail -3
+          else
+            git push origin HEAD:main
+          fi
